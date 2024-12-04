@@ -26,9 +26,9 @@ app.get("/membership-discount", (req, res) => {
   let discountedPrice = cartTotal - cartTotal * (10 / 100);
   let result;
   if (isMember === true) {
-    result = "Your Bill is Rs. " + discountedPrice + " (Discount of 10% percentage applied)";
+    result = discountedPrice;
   } else {
-    result = "Your Bill is Rs. " + cartTotal + " (No discount is applied)";
+    result = cartTotal;
   }
   res.send(result.toString());
 });
