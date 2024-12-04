@@ -68,8 +68,8 @@ app.get("/shipping-cost", (req, res) => {
   let distance = parseFloat(req.query.distance);
   let shippingCost = weight * distance * 0.1;
   let result;
-  result = "The shipping cost based on weight and distance is Rs. " + shippingCost + "/-";
-  res.send(result.toString());
+  result = shippingCost;
+  res.send(shippingCost.toString());
 });
 /// API Call - https://stackblitzstartersa9gnkk-34f5--3000--fc837ba8.local-credentialless.webcontainer.io/shipping-cost?weight=2&distance=600
 
