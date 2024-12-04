@@ -38,9 +38,9 @@ app.get("/membership-discount", (req, res) => {
 //Endpoint-3: Calculate tax on the cart total
 app.get("/calculate-tax", (req, res) => {
   let cartTotal = parseFloat(req.query.cartTotal);
-  let taxRate = 5; 
-  let tax = (cartTotal * taxRate) / 100;
-  let result = "Tax on the Cart Total is Rs. " + tax + "/-";
+  let taxRate = 5 / 100; 
+  let tax = cartTotal * taxRate;
+  let result = tax;
   res.send(result.toString());
 });
 /// API Call - https://stackblitzstartersa9gnkk-34f5--3000--fc837ba8.local-credentialless.webcontainer.io/calculate-tax?cartTotal=3600
