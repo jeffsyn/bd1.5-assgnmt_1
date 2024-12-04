@@ -14,7 +14,7 @@ let loyaltyRate = 2; // 2 points per $1
 app.get("/cart-total", (req, res) => {
   let newItemPrice = parseFloat(req.query.newItemPrice);
   let cartTotal = parseFloat(req.query.cartTotal);
-  let result = newItemPrice + cartTotal;
+  let result = newItemPrice + carTotal;
   res.send(result.toString());
 });
 /// API Call - https://stackblitzstartersa9gnkk-34f5--3000--fc837ba8.local-credentialless.webcontainer.io/cart-total?newItemPrice=1200&cartTotal=0
