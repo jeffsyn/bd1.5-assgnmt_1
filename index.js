@@ -56,7 +56,7 @@ app.get("/estimate-delivery", (req, res) => {
   } else if (shippingMethod === "express") {
     deliveryTime = (distance / 100); // 1 day per 100 kms
   }
-  let result = "Estimated delivery time of your package based on shipping method is " + deliveryTime + " days.";
+  let result = deliveryTime;
   res.send(result.toString());
 });
 /// API Call - https://stackblitzstartersa9gnkk-34f5--3000--fc837ba8.local-credentialless.webcontainer.io/estimate-delivery?shippingMethod=express&distance=600
