@@ -80,7 +80,7 @@ app.get("/loyalty-points", (req, res) => {
   let loyaltyRate = 2; // 2 points per ₹1
   let earnedPoints = purchaseAmount * loyaltyRate;
   let result;
-  result = "You have earned Loyalty Points of " + earnedPoints + " from this purchase. Thank You. Visit Again!";
+  result = earnedPoints;
   res.send(result.toString());
 });
 /// API Call - https://stackblitzstartersa9gnkk-34f5--3000--fc837ba8.local-credentialless.webcontainer.io/loyalty-points?purchaseAmount=3600
