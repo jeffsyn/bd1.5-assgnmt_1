@@ -23,7 +23,7 @@ app.get("/cart-total", (req, res) => {
 app.get("/membership-discount", (req, res) => {
   let cartTotal = parseFloat(req.query.cartTotal);
   let isMember = req.query.isMember === "true";
-  let discountedPrice = cartTotal - cartTotal * (10 / 100);
+  let discountedPrice = cartTotal - (cartTotal * (10 / 100));
   let result;
   if (isMember === true) {
     result = discountedPrice;
